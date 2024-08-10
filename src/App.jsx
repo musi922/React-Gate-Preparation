@@ -5,9 +5,8 @@ import './App.css'
 import Name from './Name'
 import Funct from './Funct'
 
-function App() {
- 
 
+function App() {
   return (
     <>
     <h1 className="text-3xl font-bold underline">
@@ -15,7 +14,7 @@ function App() {
   </h1>
   <Name name="richard"/>
   <h1>function btn</h1>
-  <Funct name="richard"/>
+  <Funct/>
     </>
   )
 }

@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
+export default function Funct() {
+    const items = [
+        { id: 1, name: 'Item 1' },
+        { id: 2, name: 'Item 2' },
+        { id: 3, name: 'Item 3' },
+        { id: 4, name: 'Item 4' },
 
-export default function Funct({name}){
-    const [count,setCount] = useState(0)
-
-    const increment = () =>{
-        setCount(count+1)
-    }
-
+      ];
     return (
         <>
-        <h1>{count}</h1>
-        <button onClick={increment}> count</button>
-        <h2>{name}</h2>
+         {items.map(item=>(
+            <h1 key={item.id}>{item.name}</h1>
+         ))}
         </>
-    )
+    );
 }
