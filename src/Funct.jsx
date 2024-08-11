@@ -1,11 +1,24 @@
-import React, { Fragment } from "react";
+import React, { useReducer } from "react";
 
-export default function Funct({children}) {
-  
+function reducer(state,action) {
+    if (action.type === "increment") {
+        return {count:state.count+1}
+    }
+    else {
+        return {count:state.count-1}
+    }
+}
+export default function Funct() {
+    const initialstate = {count:0}
+    const [state,dispatch] = useReducer(reducer,initialstate)
+
+    
   
     return (
-        <Fragment >
-        {children}
-        </Fragment>
+        <>
+        <h1>{state.count}</h1>
+        <button onClick={()=>dispatch({type:"increment"})}>increment</button>
+        <button onClick={()=>dispatch({type:"decrement"})}>decrement</button>
+        </>
     );
 }
