@@ -1,22 +1,23 @@
 import React, { useReducer } from "react";
+import { act } from "react-dom/test-utils";
 
-function reducer(state,action) {
+function reducer(count,action) {
     if (action.type === "increment") {
-        return {count:state.count+1}
+        return count+1
     }
     else {
-        return {count:state.count-1}
+        return count-1
     }
 }
 export default function Funct() {
-    const initialstate = {count:0}
-    const [state,dispatch] = useReducer(reducer,initialstate)
+   
+    const [count,dispatch]= useReducer(reducer,0)
 
     
   
     return (
         <>
-        <h1>{state.count}</h1>
+        <h1>{count}</h1>
         <button onClick={()=>dispatch({type:"increment"})}>increment</button>
         <button onClick={()=>dispatch({type:"decrement"})}>decrement</button>
         </>
