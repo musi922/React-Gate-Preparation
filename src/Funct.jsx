@@ -1,18 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-export default function Funct() {
-    const items = [
-        { id: 1, name: 'Item 1' },
-        { id: 2, name: 'Item 2' },
-        { id: 3, name: 'Item 3' },
-        { id: 4, name: 'Item 4' },
-
-      ];
+export default function Funct({children}) {
+  
+  
     return (
-        <>
-         {items.map(item=>(
-            <h1 key={item.id}>{item.name}</h1>
-         ))}
-        </>
+        <Fragment >
+        {children}
+        </Fragment>
     );
 }

@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Name from './Name'
 import Funct from './Funct'
+import State from './State'
 
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
   </h1>
   <Name name="richard"/>
   <h1>function btn</h1>
-  <Funct/>
+      <Funct>
+    <h1>yuhuuu</h1>
+    </Funct>
+    <State/>
     </>
   )
 }

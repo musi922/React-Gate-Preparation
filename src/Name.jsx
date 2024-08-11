@@ -11,9 +11,12 @@ export default class Name extends React.Component{
       this.setState({count:this.state.count+1})
    }
    render(){
+      const styleElement={
+         color:"Red"
+     }
     return (
       <>
-      <h1>{this.state.count}</h1>
+      <h1 style={styleElement}>{this.state.count}</h1>
       <button onClick={this.increment}>increase</button>
       <h2>{this.props.name}</h2>
       </>
